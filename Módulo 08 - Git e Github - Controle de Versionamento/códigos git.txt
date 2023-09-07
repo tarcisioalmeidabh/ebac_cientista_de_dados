@@ -1,0 +1,39 @@
+git init (iniciei o git) 
+
+git clone urlrepositorio (repositório da nuvem para computador)
+
+git status (status do repositório)
+
+git add "nomedoarquivo" (adicionar arquivo específico)
+
+git add . (adicionar todos os arquivos da pasta)
+
+git commit -m "nome commit" (criar uma commit)
+
+git config --global user.email "seuemail" (adicionar email)
+
+git config --global user.name "seuusername" (adicionar seu nome)
+
+git push (subir a pasta para o git hub)
+
+git remote add origin urldorepositório (direcionar local do arquivo)
+
+git push --set-upstream origin master (direcionar branch)
+
+git reflog (histórico versões)
+
+git reset --hard idversãocodigo (restaurar versão do codigo)
+
+git branch (quais branchs existem)
+
+git branch nomebranch (criar nova branch)
+
+git branch -M "novonomebranch" (mudar nome da branch)
+
+git checkout nomebranch (trocar de branch)
+
+git checkout -b nomebranchnova (criar nova branch e trocar para ela)
+
+git pull (atualizar a versão da maquina com a da nuvem)
+
+git merge nomebranch (atualizar branch principal com branch atual)
