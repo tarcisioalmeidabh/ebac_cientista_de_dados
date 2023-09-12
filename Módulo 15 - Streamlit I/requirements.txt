@@ -1,0 +1,8 @@
+numpy
+pandas
+matplotlib
+altair
+plotly
+scipy
+bokeh==2.4.3
+pydeck
