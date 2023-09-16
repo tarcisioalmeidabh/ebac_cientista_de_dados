@@ -4,30 +4,6 @@ import pandas as pd
 import time
 
 
-st.set_page_config(
-    page_title="EBAC | Módulo 15 | Streamlit I | Exercício",
-    # page_icon="https://ebaconline.com.br/favicon.ico",
-    page_icon="https://raw.githubusercontent.com/rhatiro/Curso_EBAC-Profissao_Cientista_de_Dados/main/ebac-course-utils/media/icon/favicon.ico",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
-
-
-st.markdown('''
-<img src="https://raw.githubusercontent.com/rhatiro/Curso_EBAC-Profissao_Cientista_de_Dados/main/ebac-course-utils/media/logo/newebac_logo_black_half.png" alt="ebac-logo">
-
----
-
-# **Profissão: Cientista de Dados**
-### **Módulo 15** | Streamlit I | Exercício
-
-Aluno [Roberto Hatiro Nishiyama](https://www.linkedin.com/in/rhatiro/)<br>
-Data: 5 de abril de 2023.
-
----
-            ''', unsafe_allow_html=True)
-
-
 st.markdown("# Main page 🎈")
 st.sidebar.markdown("# Main page 🎈")
 

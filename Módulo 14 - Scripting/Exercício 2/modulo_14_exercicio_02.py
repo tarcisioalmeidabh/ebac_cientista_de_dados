@@ -1,11 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-
 import sys
 import os
-
-
 
 
 sns.set_theme()
@@ -42,7 +39,7 @@ def plot_pivot_table(df: pd.DataFrame,
 
 
 for mes in sys.argv[1:]:
-    sinasc = pd.read_csv(f'https://raw.githubusercontent.com/rhatiro/Curso_EBAC-Profissao_Cientista_de_Dados/main/Mo%CC%81dulo%2014%20-%20Scripting/database/input/SINASC_RO_2019_{mes}.csv')
+    sinasc = pd.read_csv(f'https://github.com/tarcisioalmeidabh/ebac_cientista_de_dados/blob/main/M%C3%B3dulo%2014%20-%20Scripting/database/input/SINASC_RO_2019_{mes}.csv')
 
     max_data = sinasc.DTNASC.max()[:7]
     os.makedirs('./output/figs/'+max_data, exist_ok=True)
