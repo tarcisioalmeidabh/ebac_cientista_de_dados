@@ -1,58 +1,74 @@
-# Título do projeto
+![badge](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)
+![badge](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![badge](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
 
-Um simples resumo do uso/propósito do projeto.
+https://github.com/harleiaki/Streamlit_ler_csv-xlsx/assets/96266332/5199105d-3e1a-4001-a7c7-9a8d725ff24a
+
+
+# Filtro de dados com Streamlit
+
+Esse projeto é um filtro de dados de clientes de um banco
 
 ## Descrição do projeto
 
-Um parágrafo aprofundando mais sobre o seu projeto e uma explicação geral do uso.
+Para o projeto funcionar é necessário fazer o download do arquivo bank-additional.csv para subir no site da aplicação
 
-## Link para a aplicação (LIVE)
-https://telemarketing-659l.onrender.com
+### Link para a aplicação (LIVE)
+- https://harleiaki-aplicativo-ler-csv-xlsx-app-7-4m0qaf.streamlit.app/
+- https://csv-xlsx.onrender.com/
 
-## Utilização
+
+## Utilização 
 
 ### Dependencias
 
-* Descreve quaisquer prerequisitos, bibliotecas, versão do SO, etc., que é necessário para rodar o projeto.
-* exemplo. Windows 10...
+* prerequisitos, bibliotecas, versão do SO, etc., que é necessário para rodar o projeto.
+- pandas==1.3.5
+- numpy==1.21.6
+- seaborn==0.12.2
+- XlsxWriter==3.1.2
+- scipy==1.7.3
+- matplotlib==3.5.3
+- streamlit==1.23.1
+- altair==5.0.1
+- protobuf==4.24.2
 
 ### Instalação
 
-* Como/aonde fazer o download do seu projeto/programa
-* Quaisquer modificação necessária nos arquivos/diretórios
+* Faça o download do arquivo csv "bank-additional" [bank-additional](https://github.com/harleiaki/Streamlit_ler_csv-xlsx/blob/main/bank-additional.csv)
+
+![Screenshot 2023-09-06 152310](https://github.com/harleiaki/Streamlit_ler_csv-xlsx/assets/96266332/5e6d5fb4-9961-4f32-b7e2-5c63645bb8a8)
 
 ### Executando o projeto
 
-* Como rodar o projeto/programa
-* Passo a passo em tópicos (bullet points)
-```
-bloco de código para os comandos necessários
-```
+* Suba no site em Browse files, como mostra no vídeo.
 
-## Ajuda
+![image](https://github.com/harleiaki/Streamlit_ler_csv-xlsx/assets/96266332/619d32ce-dd96-46e8-92e6-a9e5efb7a343)
+![image](https://github.com/harleiaki/Streamlit_ler_csv-xlsx/assets/96266332/5288aa0a-53f2-42ef-9697-944ddbe0b8ec)
+![image](https://github.com/harleiaki/Streamlit_ler_csv-xlsx/assets/96266332/9ea8524f-9cab-4b01-8a88-8b7e058869cd)
+![image](https://github.com/harleiaki/Streamlit_ler_csv-xlsx/assets/96266332/fdd4cbe9-47a5-4907-9be2-461351663797)
 
-Qualquer ponto importante de problemas ou erros comuns
-```
-comando para rodar se o programa tiver uma informação de ajuda
-```
+
+
 
 ## Autores
 
 Nomes dos desenvolvedores do projeto e informação para entrar em contato.
 
-ex. Roberto Hatiro  
-ex. [@rhatiro](https://www.linkedin.com/in/rhatiro/)
+- Harlei
+<a href="https://www.linkedin.com/in/harlei-akira" target="_blank"><img align="left" src="https://img.shields.io/badge/LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+<br/>
 
-## Histórico de versões.
+## Histórico de versões
 
-* 0.2
-	* Ajustes de diversos bugs e otimização
-* 0.1
-    * Primeira versão
+* Na versão do Streamlit pode haver erros com Seaborn por isso integrei a aplicação em dois sites.
+- https://harleiaki-aplicativo-ler-csv-xlsx-app-7-4m0qaf.streamlit.app/
+- https://csv-xlsx.onrender.com/
 
 ## Licença de uso
 
 Esse projeto possui licença de uso [NAME HERE] - acesse o arquivo LICENSE.md para mais detalhes.
+- Esse projeto é de uso aberto.
 
 ## Fontes de inspiração
 
