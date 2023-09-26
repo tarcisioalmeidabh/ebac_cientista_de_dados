@@ -39,7 +39,7 @@ def to_excel(df):
     output = BytesIO()
     writer = pd.ExcelWriter(output, engine='xlsxwriter')
     df.to_excel(writer, index=False, sheet_name='Sheet1')
-    writer.save()
+    writer.close()
     processed_data = output.getvalue()
     return processed_data
 
@@ -48,7 +48,7 @@ def to_excel(df):
 def main():
     # Configuração inicial da página da aplicação
     st.set_page_config(page_title = 'Filtro', \
-        page_icon = 'Python.png',
+        page_icon = None,
         layout="wide",
         initial_sidebar_state='expanded'
     )
@@ -58,7 +58,7 @@ def main():
     st.markdown("---")
     
     # Apresenta a imagem na barra lateral da aplicação
-    image = Image.open("Machine.jpeg")
+    image = Image.open("Bank-Branding.jpg")
     st.sidebar.image(image)
 
     # Botão para carregar arquivo na aplicação
@@ -194,16 +194,16 @@ def main():
         st.write('## Proporção de aceite')
         # PLOTS    
         if graph_type == 'Barras':
-            sns.barplot(x = bank_raw_target_perc.index, 
-                        y = 'y',
+            sns.barplot(x = bank_raw_target_perc.values.squeeze(), 
+                        y = bank_raw_target_perc.index,
                         data = bank_raw_target_perc, 
                         ax = ax[0])
             ax[0].bar_label(ax[0].containers[0])
             ax[0].set_title('Dados brutos',
                             fontweight ="bold")
             
-            sns.barplot(x = bank_target_perc.index, 
-                        y = 'y', 
+            sns.barplot(x = bank_target_perc.values.squeeze(), 
+                        y = bank_target_perc.index, 
                         data = bank_target_perc, 
                         ax = ax[1])
             ax[1].bar_label(ax[1].containers[0])
