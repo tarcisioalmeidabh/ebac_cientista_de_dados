@@ -125,5 +125,62 @@ def main():
         df_RFV.set_index('ID_cliente', inplace=True)
         st.write(df_RFV)
 
+        st.write('## Segmentação utilizando o RFV')
+        st.write("Um jeito de segmentar os clientes é criando quartis para cada componente do RFV, sendo que o melhor quartil é chamado de 'A', o segundo melhor quartil de 'B', o terceiro melhor de 'C' e o pior de 'D'. O melhor e o pior depende da componente. Po exemplo, quanto menor a recência melhor é o cliente (pois ele comprou com a gente tem pouco tempo) logo o menor quartil seria classificado como 'A', já pra componente frêquencia a lógica se inverte, ou seja, quanto maior a frêquencia do cliente comprar com a gente, melhor ele/a é, logo, o maior quartil recebe a letra 'A'.")
+        st.write('Se a gente tiver interessado em mais ou menos classes, basta a gente aumentar ou diminuir o número de quantils pra cada componente.')
+
+        st.write('Quartis para o RFV')
+        quartis = df_RFV.quantile(q=[0.25,0.5,0.75])
+        st.write(quartis)
+
+        st.write('Tabela após a criação dos grupos')
+        df_RFV['R_quartil'] = df_RFV['Recencia'].apply(recencia_class,
+                                                        args=('Recencia', quartis))
+        df_RFV['F_quartil'] = df_RFV['Frequencia'].apply(freq_val_class,
+                                                        args=('Frequencia', quartis))
+        df_RFV['V_quartil'] = df_RFV['Valor'].apply(freq_val_class,
+                                                    args=('Valor', quartis))
+        df_RFV['RFV_Score'] = (df_RFV.R_quartil 
+                            + df_RFV.F_quartil 
+                            + df_RFV.V_quartil)
+        st.write(df_RFV)
+
+        st.write('Quantidade de clientes por grupos')
+        st.write(df_RFV['RFV_Score'].value_counts())
+
+        st.write('#### Clientes com menor recência, maior frequência e maior valor gasto')
+        st.write(df_RFV[df_RFV['RFV_Score']=='AAA'].sort_values('Valor', ascending=False))
+
+        st.write('### Ações de marketing/CRM')
+
+        dict_acoes = {'AAA': 'Enviar cupons de desconto, Pedir para indicar nosso produto pra algum amigo, Ao lançar um novo produto enviar amostras grátis pra esses.',
+        'DDD': 'Churn! clientes que gastaram bem pouco e fizeram poucas compras, fazer nada',
+        'DAA': 'Churn! clientes que gastaram bastante e fizeram muitas compras, enviar cupons de desconto para tentar recuperar',
+        'CAA': 'Churn! clientes que gastaram bastante e fizeram muitas compras, enviar cupons de desconto para tentar recuperar'
+        }
+
+        df_RFV['acoes de marketing/crm'] = df_RFV['RFV_Score'].map(dict_acoes)
+        st.write(df_RFV)
+
+
+        # df_RFV.to_excel('./auxiliar/output/RFV_.xlsx')
+        df_xlsx = to_excel(df_RFV)
+        st.download_button(label='📥 Download',
+                            data=df_xlsx ,
+                            file_name= 'RFV_.xlsx')
+
+        st.write('Quantidade de clientes por tipo de ação')
+        st.write(df_RFV['acoes de marketing/crm'].value_counts(dropna=False))
+
 if __name__ == '__main__':
 	main()
+    
+
+
+
+
+
+
+
+
+
