@@ -34,15 +34,15 @@ def main():
     st.markdown("---")
     
     # Botão para carregar arquivo na aplicação
-    st.sidebar.write("## Suba o arquivo")
+    st.sidebar.write("## Faça o upload do arquivo")
     data_file_1 = st.sidebar.file_uploader("Bank Credit Dataset", type = ['csv','ftr'])
 
     # Verifica se há conteúdo carregado na aplicação
     if (data_file_1 is not None):
         df_credit = pd.read_feather(data_file_1)
         df_credit = df_credit.sample(50000)
-
-        model_saved = load_model('C:\Users\tarci\OneDrive\Documentos\EBAC\01 - Cientista de Dados\Módulo 38 - Streamlit VI e Pycaret/exercicio_e_projeto_final')
+        
+        model_saved = load_model('model_final')
         predict = predict_model(model_saved, data=df_credit)
 
         df_xlsx = to_excel(predict)

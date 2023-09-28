@@ -1,0 +1,18 @@
+2023-09-28 10:35:50,025:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-09-28 10:35:50,026:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-09-28 10:35:50,027:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-09-28 10:35:50,027:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-09-28 10:49:33,531:INFO:Initializing load_model()
+2023-09-28 10:49:33,531:INFO:load_model(model_name=model_final, platform=None, authentication=None, verbose=True)
+2023-09-28 10:50:01,884:INFO:Initializing load_model()
+2023-09-28 10:50:01,884:INFO:load_model(model_name=/exercicio_e_projeto_final, platform=None, authentication=None, verbose=True)
+2023-09-28 10:51:27,108:INFO:Initializing load_model()
+2023-09-28 10:51:27,109:INFO:load_model(model_name=\exercicio_e_projeto_final, platform=None, authentication=None, verbose=True)
+2023-09-28 10:51:39,037:INFO:Initializing load_model()
+2023-09-28 10:51:39,037:INFO:load_model(model_name=exercicio_e_projeto_final, platform=None, authentication=None, verbose=True)
+2023-09-28 10:52:15,842:INFO:Initializing load_model()
+2023-09-28 10:52:15,842:INFO:load_model(model_name=model_final, platform=None, authentication=None, verbose=True)
